@@ -1,13 +1,13 @@
 def nth_lowest_selling(sales, n):
 
-    freq = {}
+    freqBooks = {}
     for book in sales:
-        if (book in freq):
-            freq[book] += 1
+        if (book in freqBooks):
+            freqBooks[book] += 1
         else:
-            freq[book] = 1
+            freqBooks[book] = 1
 
-    y = {k: v for k, v in sorted(freq.items(), key=lambda item: item[1])}
+    y = {k: v for k, v in sorted(freqBooks.items(), key=lambda item: item[1])}
     bookSales = list(y)
 
     print(bookSales)
